@@ -4,11 +4,13 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemButton from "@mui/material/ListItemButton";
+import { useNavigate } from "react-router-dom";
 
 import "./Home.css";
 
 function Home() {
   const [apiData, setApiData] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchData();
@@ -23,13 +25,17 @@ function Home() {
     }
   };
 
+  const handleListItemClick = (key) => {
+    navigate(`/${key}`);
+  };
+
   return (
     <div className="list-container">
       {apiData ? (
         <List className="horizontal-list">
           {Object.keys(apiData).map((key) => (
             <ListItem key={key} className="list-item">
-              <ListItemButton>
+              <ListItemButton onClick={() => handleListItemClick(key)}>
                 <ListItemText primary={key} secondary={apiData[key]} />
               </ListItemButton>
             </ListItem>
