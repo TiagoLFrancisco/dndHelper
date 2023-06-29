@@ -12,6 +12,11 @@ import Home from "./components/Home";
 import AbilityScores from "./components/abilityscores/AbilityScores";
 import Alignments from "./components/alignments/Alignments";
 import CharismaAbility from "./components/abilityscores/charisma/CharismaAbility";
+import ConstitutionAbility from "./components/abilityscores/constitution/ConstitutionAbility";
+import DexterityAbility from "./components/abilityscores/dexterity/DexterityAbility";
+import IntelligenceAbility from "./components/abilityscores/intelligence/IntelligenceAbility";
+import StrengthAbility from "./components/abilityscores/strength/StrengthAbility";
+import WisdomAbility from "./components/abilityscores/wisdom/WisdomAbility";
 
 function App() {
   return (
@@ -22,6 +27,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/ability-scores" element={<AbilityScores />} />
           <Route path="/ability-scores/cha" element={<CharismaAbility />} />
+          <Route path="/ability-scores/con" element={<ConstitutionAbility />} />
+          <Route path="/ability-scores/dex" element={<DexterityAbility />} />
+          <Route path="/ability-scores/int" element={<IntelligenceAbility />} />
+          <Route path="/ability-scores/str" element={<StrengthAbility />} />
+          <Route path="/ability-scores/wis" element={<WisdomAbility />} />
           <Route path="/alignments" element={<Alignments />} />
         </Routes>
       </div>
