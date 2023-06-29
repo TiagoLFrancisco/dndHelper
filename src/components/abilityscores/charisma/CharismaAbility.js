@@ -11,7 +11,7 @@ const charismaAbility = {
   name: "CHA",
   full_name: "Charisma",
   desc: "Charisma measures your ability to interact effectively with others. It includes such factors as confidence and eloquence, and it can represent a charming or commanding personality.",
-  saving:
+  check:
     "A Charisma check might arise when you try to influence or entertain others, when you try to make an impression or tell a convincing lie, or when you are navigating a tricky social situation.",
   skill_desc:
     "The Deception, Intimidation, Performance, and Persuasion skills reflect aptitude in certain kinds of Charisma checks.",
@@ -57,16 +57,19 @@ function CharismaAbility() {
           />
         </ListItem>
         <ListItem>
-          <ListItemText primary={"Check"} secondary={charismaAbility.saving} />
+          <ListItemText
+            primary={"Charisma Check"}
+            secondary={charismaAbility.check}
+          />
         </ListItem>
-      </List>
-      <List className="horizontal-list">
         <ListItem>
           <ListItemText
             primary="Affected Skills"
             secondary={charismaAbility.skill_desc}
           />
         </ListItem>
+      </List>
+      <List className="horizontal-list">
         {charismaAbility.skills.map((skill, index) => (
           <ListItem key={index} className="list-item">
             <ListItemButton>
