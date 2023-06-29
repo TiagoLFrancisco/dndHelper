@@ -11,7 +11,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import Home from "./components/Home";
 import AbilityScores from "./components/abilityscores/AbilityScores";
 import Alignments from "./components/alignments/Alignments";
-import AbilityCharisma from "./components/abilityscores/charisma/AbilityCharisma";
+import CharismaAbility from "./components/abilityscores/charisma/CharismaAbility";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ability-scores" element={<AbilityScores />} />
-          <Route path="/ability-scores/cha" element={<AbilityCharisma />} />
+          <Route path="/ability-scores/cha" element={<CharismaAbility />} />
           <Route path="/alignments" element={<Alignments />} />
         </Routes>
       </div>

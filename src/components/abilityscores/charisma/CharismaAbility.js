@@ -4,9 +4,9 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemButton from "@mui/material/ListItemButton";
 
-import "./AbilityCharisma.css";
+import "./CharismaAbility.css";
 
-const abilityCharisma = {
+const charismaAbility = {
   index: "cha",
   name: "CHA",
   full_name: "Charisma",
@@ -40,34 +40,34 @@ const abilityCharisma = {
   url: "/api/ability-scores/cha",
 };
 
-function AbilityCharisma() {
+function CharismaAbility() {
   return (
     <div>
       <List>
         <ListItem>
           <ListItemText
-            primary={abilityCharisma.full_name}
-            secondary={abilityCharisma.name}
+            primary={charismaAbility.full_name}
+            secondary={charismaAbility.name}
           />
         </ListItem>
         <ListItem>
           <ListItemText
             primary={"Description"}
-            secondary={abilityCharisma.desc}
+            secondary={charismaAbility.desc}
           />
         </ListItem>
         <ListItem>
-          <ListItemText primary={"Check"} secondary={abilityCharisma.saving} />
+          <ListItemText primary={"Check"} secondary={charismaAbility.saving} />
         </ListItem>
       </List>
       <List className="horizontal-list">
         <ListItem>
           <ListItemText
             primary="Affected Skills"
-            secondary={abilityCharisma.skill_desc}
+            secondary={charismaAbility.skill_desc}
           />
         </ListItem>
-        {abilityCharisma.skills.map((skill, index) => (
+        {charismaAbility.skills.map((skill, index) => (
           <ListItem key={index} className="list-item">
             <ListItemButton>
               <ListItemText primary={skill.name} secondary={skill.url} />
@@ -79,4 +79,4 @@ function AbilityCharisma() {
   );
 }
 
-export default AbilityCharisma;
+export default CharismaAbility;
