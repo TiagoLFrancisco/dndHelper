@@ -17,6 +17,15 @@ import DexterityAbility from "./components/abilityscores/dexterity/DexterityAbil
 import IntelligenceAbility from "./components/abilityscores/intelligence/IntelligenceAbility";
 import StrengthAbility from "./components/abilityscores/strength/StrengthAbility";
 import WisdomAbility from "./components/abilityscores/wisdom/WisdomAbility";
+import ChaoticEvil from "./components/alignments/chaoticevil/ChaoticEvil";
+import ChaoticGood from "./components/alignments/chaoticgood/ChaoticGood";
+import ChaoticNeutral from "./components/alignments/chaoticneutral/ChaoticNeutral";
+import LawfulGood from "./components/alignments/lawful-good/LawfulGood";
+import LawfulNeutral from "./components/alignments/lawful-neutral/LawfulNeutral";
+import Neutral from "./components/alignments/neutral/Neutral";
+import NeutralEvil from "./components/alignments/neutralevil/NeutralEvil";
+import NeutralGood from "./components/alignments/neutralgood/NeutralGood";
+import LawfulEvil from "./components/alignments/lawful-evil/LawfulEvil";
 
 function App() {
   return (
@@ -33,6 +42,21 @@ function App() {
           <Route path="/ability-scores/str" element={<StrengthAbility />} />
           <Route path="/ability-scores/wis" element={<WisdomAbility />} />
           <Route path="/alignments" element={<Alignments />} />
+          <Route path="/alignments/chaotic-evil" element={<ChaoticEvil />} />
+          <Route path="/alignments/chaotic-good" element={<ChaoticGood />} />
+          <Route
+            path="/alignments/chaotic-neutral"
+            element={<ChaoticNeutral />}
+          />
+          <Route path="/alignments/lawful-good" element={<LawfulGood />} />
+          <Route path="/alignments/lawful-evil" element={<LawfulEvil />} />
+          <Route
+            path="/alignments/lawful-neutral"
+            element={<LawfulNeutral />}
+          />
+          <Route path="/alignments/neutral" element={<Neutral />} />
+          <Route path="/alignments/neutral-evil" element={<NeutralEvil />} />
+          <Route path="/alignments/neutral-good" element={<NeutralGood />} />
         </Routes>
       </div>
     </BrowserRouter>
